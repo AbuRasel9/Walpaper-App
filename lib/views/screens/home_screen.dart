@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:walpaper/views/widget/cat_block.dart';
 import 'package:walpaper/views/widget/custom_appbar.dart';
 import 'package:walpaper/views/widget/search_bar.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,10 +27,22 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
-            SizedBox(height:20),
+            const SizedBox(height:20),
+            //search bar
 
             search(text: 'Search Walpaper',),
-            //search bar
+            //Category block
+            const SizedBox(height: 20,),
+            SizedBox(
+              height: 50,
+              width: MediaQuery.of(context).size.width,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                  itemCount: 20,
+                  itemBuilder: (context,index){
+                return const CategoryBlock();
+              }),
+            )
           ],
         ),
       )

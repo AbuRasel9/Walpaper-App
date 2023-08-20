@@ -11,7 +11,7 @@ class search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         decoration: BoxDecoration(
             color: Colors.black12,
             borderRadius: BorderRadius.circular(25),
@@ -21,14 +21,14 @@ class search extends StatelessWidget {
             Expanded(
               child: TextFormField(
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(borderSide: BorderSide.none),
+                    border: const OutlineInputBorder(borderSide: BorderSide.none),
                     hintText: text,
                     // hintStyle: TextStyle(color: Colors.black),
 
                 ),
               ),
             ),
-            InkWell(onTap: (){},child: Icon(Icons.search,size: 30,color: Colors.black54,))
+            InkWell(onTap: (){},child: const Icon(Icons.search,size: 30,color: Colors.black54,))
           ],
         ));
   }
