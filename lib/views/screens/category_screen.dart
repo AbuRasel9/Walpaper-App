@@ -3,14 +3,14 @@ import 'package:walpaper/views/widget/cat_block.dart';
 import 'package:walpaper/views/widget/custom_appbar.dart';
 import 'package:walpaper/views/widget/search_bar.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class CategoryScreen extends StatefulWidget {
+  const CategoryScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<CategoryScreen> createState() => _CategoryScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,26 +31,48 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.all(15.0),
             child: Column(
               children: [
-                const SizedBox(height: 20),
-                //search bar
+                const SizedBox(height: 10),
+                Stack(
+                  children: [
+                    Image.network(
+                      "https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&w=400",
+                      fit: BoxFit.cover,
+                      height: 150,
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                    Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width,
+                      color: Colors.black38,
+                    ),
+                    Positioned(
+                      left: 160,
+                      top: 40,
+                      child: Column(
 
-                search(
-                  text: 'Search Walpaper',
+                        children: [
+                          Text(
+
+                            "Category",
+                            style: TextStyle(
+
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400,
+                                letterSpacing: .2),
+                          ),
+                          SizedBox(height: 5,),
+                          Text("Mountains",style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: .2),)
+                        ],
+                      ),
+                    )
+                  ],
                 ),
-                //Category block
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                  height: 50,
-                  width: MediaQuery.of(context).size.width,
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 25,
-                      itemBuilder: (context, index) {
-                        return const CategoryBlock();
-                      }),
-                ),
+
                 const SizedBox(
                   height: 20,
                 ),

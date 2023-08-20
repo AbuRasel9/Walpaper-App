@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:walpaper/views/screens/category_screen.dart';
 import 'package:walpaper/views/screens/home_screen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'walpaper',
       theme: ThemeData(
       ),
-      home: const HomeScreen(),
+      home: const CategoryScreen(),
     );
   }
 }
