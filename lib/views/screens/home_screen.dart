@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:walpaper/controller/api_operation.dart';
 import 'package:walpaper/views/widget/cat_block.dart';
 import 'package:walpaper/views/widget/custom_appbar.dart';
 import 'package:walpaper/views/widget/search_bar.dart';
@@ -11,6 +12,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+
+    super.initState();
+    ApiOperation.getTrandingWalpapers();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

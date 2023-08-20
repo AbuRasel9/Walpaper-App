@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'walpaper',
       theme: ThemeData(
       ),
-      home: const CategoryScreen(),
+      home: const HomeScreen(),
     );
   }
 }
