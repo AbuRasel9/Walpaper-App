@@ -32,11 +32,11 @@ class CategoryBlock extends StatelessWidget {
           //Text over the image
 
           const Positioned(
-            left: 35,
+            left: 40,
               top: 15,
               child: Text(
             "Cars",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),
           )),
         ],
       ),
